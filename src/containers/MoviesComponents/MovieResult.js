@@ -16,7 +16,7 @@ export default class MovieResult extends Component {
   }
 
   addMovie(movie){
-    let my_url = 'https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/movies';
+    let my_url = 'https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/movies';
     let data = {
       user_id: sessionStorage.user_id,
       movie: {

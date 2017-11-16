@@ -21,7 +21,7 @@ export default class NewsFormContainer extends Component {
 
 addNews(source){
   debugger
-  let my_url = 'https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/news';
+  let my_url = 'https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/news';
   let data = {
     user_id: sessionStorage.user_id,
     news: {

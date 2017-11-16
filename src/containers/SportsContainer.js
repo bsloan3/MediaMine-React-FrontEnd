@@ -23,7 +23,7 @@ export default class SportsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/sports/')
+    fetch('https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/sports/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({sports_data: responseJson});

@@ -21,7 +21,7 @@ export default class Calendar extends Component {
 
   addEvent(e){
     e.preventDefault()
-    axios.post('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/events', {
+    axios.post('https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/events', {
       event: {
         title: this.state.title,
         description: this.state.description

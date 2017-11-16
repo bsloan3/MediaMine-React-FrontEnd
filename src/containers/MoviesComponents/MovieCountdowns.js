@@ -35,7 +35,7 @@ export default class MovieCountdowns extends Component {
     };
   }
   componentDidMount(){
-    fetch('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/movies/')
+    fetch('https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/movies/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({movies: responseJson});

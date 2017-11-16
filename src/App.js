@@ -33,9 +33,9 @@ export default class App extends Component {
     var movie_events = [];
     var calendar_events = [];
     var user_id = sessionStorage.user_id;
-    axios.get('https://media-mine.herokuapp.com/users/' + user_id + '/movies/')
+    axios.get('https://media-mine-backend.herokuapp.com/users/' + user_id + '/movies/')
     .then(movie_response => {
-      return axios.get('https://media-mine.herokuapp.com/users/' + user_id + '/calendarevents/')
+      return axios.get('https://media-mine-backend.herokuapp.com/users/' + user_id + '/calendarevents/')
         .then(calendar_response => {
           movie_events = movie_response.data.map(e => {
             return {title: e.movie_name, start: new Date(e.movie_date), end: new Date(e.movie_date)}

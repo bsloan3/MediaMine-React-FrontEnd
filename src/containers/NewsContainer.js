@@ -11,7 +11,7 @@ export default class NewsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/news/')
+    fetch('https://media-mine-backend.herokuapp.com/users/'+sessionStorage.user_id+'/news/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({news_sources: responseJson});
