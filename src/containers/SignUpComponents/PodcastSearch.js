@@ -20,7 +20,7 @@ export default class PodcastSearch extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    fetch('http://localhost:5000/podcasts/')
+    fetch('https://media-mine.herokuapp.com/podcasts/')
      .then( response => response.json())
      .then( responseJson => {
        responseJson.map((podcast, i) => {

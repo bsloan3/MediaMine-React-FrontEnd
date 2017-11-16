@@ -33,7 +33,7 @@ export default class PodcastContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/podcasts/')
+    fetch('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/podcasts/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({embed_links: responseJson});

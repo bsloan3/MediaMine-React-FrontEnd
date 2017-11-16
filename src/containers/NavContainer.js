@@ -16,7 +16,7 @@ export default class NavContainer extends Component {
 
   logOut(){
     sessionStorage.clear()
-    axios.post('http://localhost:5000/logout')
+    axios.post('https://media-mine.herokuapp.com/logout')
     .then((res) =>{
       console.log(this)
       sessionStorage.clear()

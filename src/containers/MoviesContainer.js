@@ -15,7 +15,7 @@ export default class MoviesContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
+    fetch('https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/movies/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({embed_links: responseJson});

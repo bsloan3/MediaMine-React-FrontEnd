@@ -23,7 +23,7 @@ export default class SignupContainer extends Component {
   submitSignUp(e) {
     // debugger
     e.preventDefault()
-    axios.post('http://localhost:5000/users', {
+    axios.post('https://media-mine.herokuapp.com/users', {
       user: {
         username: this.state.username,
         email: this.state.email,

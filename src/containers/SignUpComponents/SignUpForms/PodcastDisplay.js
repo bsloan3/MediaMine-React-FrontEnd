@@ -13,7 +13,7 @@ export default class PodcastDisplay extends Component {
   }
 
   addPodcast(podcast){
-    let my_url = 'http://localhost:5000/users/'+sessionStorage.user_id+'/podcasts';
+    let my_url = 'https://media-mine.herokuapp.com/users/'+sessionStorage.user_id+'/podcasts';
     let data ={
       user_id: sessionStorage.user_id,
       podcast: {

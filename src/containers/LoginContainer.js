@@ -15,7 +15,7 @@ export default class LoginContainer extends Component {
   }
   submitLogIn(e) {
     e.preventDefault()
-    axios.post('http://localhost:5000/login', {
+    axios.post('https://media-mine.herokuapp.com/login', {
       user: {
         email: this.state.email,
         password: this.state.password
